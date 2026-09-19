@@ -28,17 +28,8 @@ public class MaxLinkedList implements MaxList {
 
   @Override
   public void add(Integer value) {
-    Node newNode = new Node(value);
-    if (head == null) {
-      head = newNode;
-      tail = newNode;
-    } else {
-      newNode.prev = tail;
-      tail.next = newNode;
-      tail = newNode;
-    }
-    setMaxPointer(newNode);
-    size++;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
@@ -51,21 +42,14 @@ public class MaxLinkedList implements MaxList {
 
   @Override
   public void set(int index, Integer value) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-    Node target = node(index);
-    target.data = value;
-    // The old value may have been a maximum, so every later prefix can change.
-    repairMaxFrom(target);
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int getMax(int index) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-    return node(index).maxPointer.data;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
@@ -99,47 +83,21 @@ public class MaxLinkedList implements MaxList {
 
   @Override
   public boolean remove(Integer value) {
-    Node target = nodeOf(value);
-    if (target == null) {
-      return false;
-    }
-    Node afterRemoved = target.next;
-
-    if (target.prev == null) {
-      head = target.next;
-    } else {
-      target.prev.next = target.next;
-    }
-
-    if (target.next == null) {
-      tail = target.prev;
-    } else {
-      target.next.prev = target.prev;
-    }
-
-    size--;
-    // Later nodes may have pointed at the removed value.
-    repairMaxFrom(afterRemoved);
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Recompute maxPointer for start and every node after it. Does nothing when
   // start is null.
   private void repairMaxFrom(Node start) {
-    Node current = start;
-    while (current != null) {
-      setMaxPointer(current);
-      current = current.next;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Pre: node.prev, if it exists, already has a correct maxPointer.
   private void setMaxPointer(Node node) {
-    if (node.prev == null || node.data >= node.prev.maxPointer.data) {
-      node.maxPointer = node;
-    } else {
-      node.maxPointer = node.prev.maxPointer;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   private Node nodeOf(Integer value) {
