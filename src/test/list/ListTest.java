@@ -29,150 +29,128 @@ public abstract class ListTest {
   }
 
   @Test
-  public void isEmptyTrueForNewList() {
-    assertTrue(list.isEmpty());
-  }
-
-  @Test
-  public void isEmptyFalseAfterAdd() {
-    list.add(1);
-    assertFalse(list.isEmpty());
-  }
-
-  @Test
   public void addThenGetReturnsElement() {
-    list.add(42);
-    assertEquals(1, list.size());
-    assertEquals(42, list.get(0));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void elementsComeBackInOrder() {
-    list.add(10);
-    list.add(20);
-    list.add(30);
-    assertEquals(10, list.get(0));
-    assertEquals(20, list.get(1));
-    assertEquals(30, list.get(2));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void containsFindsAddedElement() {
-    list.add(5);
-    assertTrue(list.contains(5));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void containsFalseForMissingElement() {
-    list.add(5);
-    assertFalse(list.contains(6));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void indexOfReturnsFirstOccurrence() {
-    list.add(7);
-    list.add(7);
-    assertEquals(0, list.indexOf(7));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void indexOfMissingElementIsMinusOne() {
-    list.add(1);
-    assertEquals(-1, list.indexOf(2));
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void setReplacesElement() {
-    list.add(1);
-    list.add(2);
-    list.set(1, 99);
-    assertEquals(99, list.get(1));
-    assertEquals(2, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void removeOnlyElementLeavesEmpty() {
-    list.add(99);
-    assertTrue(list.remove(99));
-    assertEquals(0, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void removeFirstElementShiftsTheRest() {
-    list.add(1);
-    list.add(2);
-    list.add(3);
-    assertTrue(list.remove(1));
-    assertEquals(2, list.get(0));
-    assertEquals(3, list.get(1));
-    assertEquals(2, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void removeMiddleElementClosesTheGap() {
-    list.add(1);
-    list.add(2);
-    list.add(3);
-    assertTrue(list.remove(2));
-    assertEquals(1, list.get(0));
-    assertEquals(3, list.get(1));
-    assertEquals(2, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void removeLastElementShrinksSize() {
-    list.add(1);
-    list.add(2);
-    assertTrue(list.remove(2));
-    assertEquals(1, list.get(0));
-    assertEquals(1, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void removeMissingElementReturnsFalse() {
-    list.add(1);
-    assertFalse(list.remove(2));
-    assertEquals(1, list.size());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
+  }
+
+  @Test
+  public void containsFalseOnEmptyList() {
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
+  }
+
+  @Test
+  public void removeFromEmptyListReturnsFalse() {
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
+  }
+
+  @Test
+  public void removeDeletesOnlyTheFirstOccurrence() {
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
+  }
+
+  @Test
+  public void containsStillTrueAfterRemovingOneDuplicate() {
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
+  }
+
+  @Test
+  public void addManyElementsKeepsThemAll() {
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void getOnEmptyListThrows() {
-    try {
-      list.get(0);
-      fail("expected IndexOutOfBoundsException on an empty list");
-    } catch (IndexOutOfBoundsException e) {
-      return;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void getBelowRangeThrows() {
-    try {
-      list.get(-1);
-      fail("expected IndexOutOfBoundsException for index -1");
-    } catch (IndexOutOfBoundsException e) {
-      return;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void getAboveRangeThrows() {
-    list.add(1);
-    try {
-      list.get(1);   // size is 1, so index 1 is one past the last valid index
-      fail("expected IndexOutOfBoundsException for index == size()");
-    } catch (IndexOutOfBoundsException e) {
-      return;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Test
   public void setOutOfRangeThrows() {
-    try {
-      list.set(0, 5);   // empty list: index 0 is out of range
-      fail("expected IndexOutOfBoundsException when setting on an empty list");
-    } catch (IndexOutOfBoundsException e) {
-      return;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

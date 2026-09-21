@@ -65,11 +65,6 @@ public class LinkedList<T> implements List<T> {
   }
 
   @Override
-  public boolean isEmpty() {
-    return size == 0;
-  }
-
-  @Override
   public boolean contains(T value) {
     return indexOf(value) != -1;
   }
