@@ -29,17 +29,6 @@ public abstract class ListTest {
   }
 
   @Test
-  public void isEmptyTrueForNewList() {
-    assertTrue(list.isEmpty());
-  }
-
-  @Test
-  public void isEmptyFalseAfterAdd() {
-    list.add(1);
-    assertFalse(list.isEmpty());
-  }
-
-  @Test
   public void addThenGetReturnsElement() {
     list.add(42);
     assertEquals(1, list.size());
@@ -133,6 +122,46 @@ public abstract class ListTest {
     list.add(1);
     assertFalse(list.remove(2));
     assertEquals(1, list.size());
+  }
+
+  @Test
+  public void containsFalseOnEmptyList() {
+    assertFalse(list.contains(1));
+  }
+
+  @Test
+  public void removeFromEmptyListReturnsFalse() {
+    assertFalse(list.remove(1));
+    assertEquals(0, list.size());
+  }
+
+  @Test
+  public void removeDeletesOnlyTheFirstOccurrence() {
+    list.add(7);
+    list.add(8);
+    list.add(7);
+    assertTrue(list.remove(7));
+    assertEquals(8, list.get(0));
+    assertEquals(7, list.get(1));
+    assertEquals(2, list.size());
+  }
+
+  @Test
+  public void containsStillTrueAfterRemovingOneDuplicate() {
+    list.add(7);
+    list.add(7);
+    list.remove(7);
+    assertTrue(list.contains(7));
+  }
+
+  @Test
+  public void addManyElementsKeepsThemAll() {
+    for (int i = 0; i < 25; i++) {
+      list.add(i);
+    }
+    assertEquals(25, list.size());
+    assertEquals(0, list.get(0));
+    assertEquals(24, list.get(24));
   }
 
   @Test

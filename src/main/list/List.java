@@ -65,11 +65,4 @@ public interface List<T> {
    * @return the number of elements; never negative.
    */
   int size();
-
-  /**
-   * Report whether this list holds no elements.
-   *
-   * @return true if the list is empty, false otherwise.
-   */
-  boolean isEmpty();
 }
