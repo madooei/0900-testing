@@ -13,16 +13,6 @@ public class LinkedList<T> implements List<T> {
   private Node<T> tail;
   private int size;
 
-  private static class Node<T> {
-    T value;
-    Node<T> next;
-    Node<T> prev;
-
-    Node(T value) {
-      this.value = value;
-    }
-  }
-
   public LinkedList() {
     head = null;
     tail = null;
@@ -125,6 +115,16 @@ public class LinkedList<T> implements List<T> {
         current = current.prev;
       }
       return current;
+    }
+  }
+
+  private static class Node<T> {
+    T value;
+    Node<T> next;
+    Node<T> prev;
+
+    Node(T value) {
+      this.value = value;
     }
   }
 }
