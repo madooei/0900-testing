@@ -21,14 +21,12 @@ code/
         List.java            # the List ADT contract
         ArrayList.java       # array-backed List
         LinkedList.java      # node-backed List
-        Main.java            # demo entry point
     test/
       list/
         ListTest.java          # abstract: the List contract suite
         ArrayListTest.java     # runs the suite against ArrayList
         LinkedListTest.java    # runs the suite against LinkedList
   scripts/
-    run.sh                   # compile and run the List demo (list.Main)
     test.sh                  # compile and run every JUnit test
 ```
 
@@ -36,7 +34,6 @@ code/
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh list.LinkedListTest` — compiles everything and runs the suite against one implementation only. The class names are listed in the layout above.
-- `scripts/run.sh` — compiles everything and runs the `Main` demo.
 
 ## Contents
 
